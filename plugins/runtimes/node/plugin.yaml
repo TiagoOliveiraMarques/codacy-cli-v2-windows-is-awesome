@@ -12,8 +12,16 @@ download:
     "amd64": "x64"
     "arm": "armv7l"
     "arm64": "arm64"
+  os_mapping:
+    "windows": "win"
 binaries:
   - name: node
-    path: "bin/node"
+    path: 
+      darwin: "bin/node"
+      linux: "bin/node"
+      windows: "node"
   - name: npm
-    path: "bin/npm"
+    path: 
+      linux: "bin/npm"
+      darwin: "bin/npm"
+      windows: "npm"

@@ -43,8 +43,7 @@ func processRuntime(config RuntimeConfig, runtimesDir string) (*RuntimeInfo, err
 	// Get the appropriate extension
 	extension := GetExtension(pluginConfig.Download.Extension, runtime.GOOS)
 
-	// Get the filename using the template
-	fileName := GetFileName(pluginConfig.Download.FileNameTemplate, config.Version, mappedArch, runtime.GOOS)
+	fileName := GetFileName(pluginConfig.Download.FileNameTemplate, config.Version, mappedArch, mappedOS)
 
 	// Get the download URL using the template
 	downloadURL := GetDownloadURL(pluginConfig.Download.URLTemplate, fileName, config.Version, mappedArch, mappedOS, extension, pluginConfig.Download.ReleaseVersion)
