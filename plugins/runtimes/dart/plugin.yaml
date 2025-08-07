@@ -6,6 +6,7 @@ download:
   file_name_template: "dart-sdk"
   extension:
     default: "zip"
+    windows: "zip"
   arch_mapping:
     "386": "ia32"
     "amd64": "x64"
